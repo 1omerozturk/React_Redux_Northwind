@@ -16,21 +16,30 @@ class CategoryList extends Component {
   };
 
   render() {
+    const divStyle={
+      width:'100%'
+    };
     return (
       <div className=''>
         <h3> 
-        <Badge className='font-weight-bold fs-3 text-left'color='warning'>
+        <Badge className='font-weight-bold fs-3 text-left text-dark 'color='warning'>
           Categories</Badge></h3>
-        <ListGroup className='bg-info' >
+        <ListGroup className='bg-dark' >
           {this.props.categories.map((category) => (
+           
             <ListGroupItem
-            className='bg-info'
+            style={divStyle}
+            className='bg-danger list-group-item list-group-item-action list-group-item-danger'
               active={category.id === this.props.currentCategory.id}
               onClick={()=>this.selectCategory(category)}
               key={category.id}
             >
-              {category.categoryName}
+                <a style={divStyle} href='#' className='fs-6 badge badge-success text-dark fst-italic fw-bold'>
+                {category.categoryName}
+                </a>
+            
             </ListGroupItem>
+            
           ))}
         </ListGroup>
         </div>

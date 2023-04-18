@@ -19,12 +19,14 @@ class ProductList extends Component {
   render() {
     return (
       <div>
-        <h3>
-          <Badge className='font-weight-bold fs-3 text-right' color="warning">Products</Badge>
-          <Badge color="success">
-            {this.props.currentCategory.categoryName}
+        <h3 className='d-flex justify-content-between'>
+          <Badge className='font-weight-bold fs-3 text-dark' color="warning">Products</Badge>
+               <Badge className='text-dark font-weight-bold fs-4 ' color="warning">
+          
+            {"|"} {this.props.currentCategory.categoryName}
           </Badge>
-        </h3>
+
+          </h3>
         <Table className='bg-info text-dark fs-6'>
         <thead>
           <tr>
@@ -36,7 +38,7 @@ class ProductList extends Component {
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-dark fs-6 fst-italic fw-normal'>
           {this.props.products.map(product=>(
              <tr key={product.id}>
              <th scope="row">{product.id}</th>

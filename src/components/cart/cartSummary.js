@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as cartActions from "../../redux/actions/cartActions"
 import { Link } from 'react-router-dom'
+import alertify from 'alertifyjs'
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -14,16 +15,21 @@ import {
 import { bindActionCreators } from 'redux'
 
 class cartSummary extends Component {
+  removeFromCart(product){
+    this.props.actions.removeFromCart(product);
+    alertify.error(product.productName + " deleted the cart.")
+      
+    }
   renderSummary() {
     return (
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
-          Your Cart
+          Your Cart <Badge className='bg-dark text-warning'>{this.props.cart.length}</Badge>
         </DropdownToggle>
         <DropdownMenu right>
           {this.props.cart.map((cartItem) => (
             <DropdownItem key={cartItem.product.id}>
-                <Badge onClick={()=>this.props.actions.removeFromCart(cartItem.product)} color='danger'>X</Badge>
+                <Badge onClick={()=>this.removeFromCart(cartItem.product)} color='danger'>X</Badge>
               {cartItem.product.productName}
               <Badge color='warning'>{cartItem.quantity} </Badge>
             </DropdownItem>
