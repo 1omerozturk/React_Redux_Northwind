@@ -26,7 +26,7 @@ export default class Navi extends React.Component {
     return (
       <div>
         <Navbar color="info" light expand="md">
-          <NavbarBrand  className='text-muted fs-2 fw-bold' href="/">React-Redux-App</NavbarBrand>
+          <NavbarBrand  className='rounded-circle bg-light text-muted fs-2 fw-bold' href="/">React-Redux-App</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

@@ -16,9 +16,7 @@ class CategoryList extends Component {
   };
 
   render() {
-    const divStyle={
-      width:'100%'
-    };
+    
     return (
       <div className=''>
         <h3> 
@@ -28,13 +26,12 @@ class CategoryList extends Component {
           {this.props.categories.map((category) => (
            
             <ListGroupItem
-            style={divStyle}
-            className='bg-danger list-group-item list-group-item-action list-group-item-danger'
+            className='bg-dark list-group-item list-group-item-action activelist-group-item list-group-item-action list-group-item-light'
               active={category.id === this.props.currentCategory.id}
               onClick={()=>this.selectCategory(category)}
               key={category.id}
             >
-                <a style={divStyle} href='#' className='fs-6 badge badge-success text-dark fst-italic fw-bold'>
+                <a href='#' className='bg-dark text-warning fs-5 text-decoration-none'>
                 {category.categoryName}
                 </a>
             
