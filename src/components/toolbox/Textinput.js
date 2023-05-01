@@ -7,12 +7,12 @@ const Textinput = ({ name, label, onChange, placeHolder, value, error }) => {
   }
   return (
     <div className={wrapperClass}>
-      <label className='text-light' htmlFor={name}>{label}</label>
+      <label className='text-muted my-1' htmlFor={name}>{label}</label>
       <div className="field">
         <input
           type="text"
           name={name}
-          className="form-control"
+          className="form-control my-2"
           placeholder={placeHolder}
           value={value}
           onChange={onChange}

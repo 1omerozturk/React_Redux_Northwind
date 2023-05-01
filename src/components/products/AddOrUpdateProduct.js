@@ -14,8 +14,9 @@ function AddOrUpdateProduct({
   ...props
 }) {
   const [product, setProduct] = useState({ ...props.product })
+  const [errors,setErrors]=useState({});
   useEffect(() => {
-    if (categories.length == 0) {
+    if (categories.length === 0) {
       getCategories()
     }
     setProduct({ ...props.product })
@@ -25,8 +26,20 @@ function AddOrUpdateProduct({
     const { name, value } = event.target
     setProduct((previousProduct) => ({
       ...previousProduct,
-      [name]: name == 'categoryId' ? parseInt(value, 10) : value,
-    }))
+      [name]: name == 'categoryId' ? parseInt(value, 10) : value
+    }));
+    validate(name,value);
+    
+    
+  }
+  function validate(name,value){
+    if(name==="productName" && value===""){
+      setErrors(previousErrors=>({...previousErrors,productName:"Product name is not empty"}))
+    }
+    else{
+      setErrors("")
+   
+    }
   }
 
   function handleSave(event) {
@@ -41,6 +54,7 @@ function AddOrUpdateProduct({
       categories={categories}
       onChange={handleChange}
       onSave={handleSave}
+      errors={errors}
     />
   )
 }

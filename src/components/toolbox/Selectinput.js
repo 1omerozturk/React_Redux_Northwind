@@ -12,12 +12,12 @@ const Selectinput = ({
 }) => {
   return (
     <div className="form-group bg-dark">
-      <Label className='text-light' htmlFor={name}>{label}</Label>
+      <Label className='text-muted my-2' htmlFor={name}>{label}</Label>
       <select
         name={name}
         value={value}
         onChange={onChange}
-        className="form-control bg-dark text-muted"
+        className="form-control bg-dark text-light my-2"
       >
         <option value="">{defaultOption}</option>
         {options.map((option) => {
