@@ -27,7 +27,7 @@ export default class Navi extends React.Component {
     return (
       <div>
         <Navbar color="info" light expand="md">
-          <NavbarBrand  className='rounded-circle bg-light text-muted fs-2 fw-bold'><Link className='text-dark text-decoration-none fw-bold' to="/">Northwind App Stroe</Link></NavbarBrand>
+          <NavbarBrand  className='rounded-circle bg-light text-muted fs-2 fw-bold'><Link className='text-dark text-decoration-none fw-bold' to="/">Northwind App Store</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
