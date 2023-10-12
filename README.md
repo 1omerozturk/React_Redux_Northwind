@@ -1,13 +1,13 @@
 # Video for Project
 
 <h2>
-  
 <a href="https://www.youtube.com/watch?v=kkwnOCuCOPU">
 Video
 </a>
 </h2>
 
 <br/>
+<img src="https://i.hizliresim.com/1538v97.jpg" height="auto" width="100%" />
 <br/>
 <br/>
 
