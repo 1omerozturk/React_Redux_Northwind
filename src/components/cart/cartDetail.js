@@ -15,7 +15,7 @@ alertify.error(product.productName + " deleted the cart.")
   render() {
     return (
       <div className='mt-5'>
-        <h1 className='mt-5 text-warning fw-bold text-center'>Sepet</h1>
+        <h1 className='mt-5 text-warning fw-bold text-center'>CART</h1>
         <Table className='bg-info text-dark fs-6'>
         <thead>
           <tr>
