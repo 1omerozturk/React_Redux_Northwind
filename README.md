@@ -10,6 +10,10 @@ Video
 <img src="https://i.hizliresim.com/1538v97.jpg" height="auto" width="100%" />
 <br/>
 <br/>
+<img src="./images/img.png" height="auto" width="100%" />
+<br/>
+<br/>
+
 
 # Getting Started with Create React App
 
